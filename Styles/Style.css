@@ -6,6 +6,22 @@ padding: 0;
 box-sizing:border-box;
 
 }
+
+footer {
+
+ 
+    bottom: 0;    
+
+height:auto;
+width: 100%;
+position: fixed;
+left: 0;
+text-align:right;
+background-color:black;
+opacity:0.7;
+
+
+}
 /* Landing Page CSS */
 
 .BGImg { 
@@ -89,6 +105,21 @@ padding:2rem;
         
         
           
+        }
+        footer {
+
+ 
+            bottom: 0;    
+            background-color:black;
+            opacity:0.7;
+        height:auto;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        text-align:center;
+        
+        
+        
         }
         #VipBtn {
             width:50%;
@@ -208,15 +239,11 @@ padding:2rem;
                     height:auto;
                     text-align:center;
                     padding:2rem;
+                
                   
                   }
 
-                  footer {
-
-                    text-align:right;
-                    background-color:#050205;
-
-                  }
+                 
 
     img {
         object-fit: cover;
@@ -278,23 +305,15 @@ a:hover {
     text-decoration:underline;
 
 }
+::-webkit-scrollbar {
+
+    display:none;
+
+}
 
 /* Footer */
 
-footer {
 
- 
-    bottom: 0;    
-
-height:auto;
-width: 100%;
-position: fixed;
-left: 0;
-text-align:right;
-
-
-
-}
         
          /*  */
             img[alt="logo"] {
