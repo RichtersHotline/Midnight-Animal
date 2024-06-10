@@ -22,6 +22,13 @@ opacity:0.7;
 
 
 }
+
+
+.carousel-caption {
+
+    
+
+}
 /* Landing Page CSS */
 
 .BGImg { 
@@ -34,6 +41,43 @@ background-position:center;
 background-attachment:fixed;
 padding:2rem;
 }
+/* About Us Styling */
+.BGImgAbout {
+    background-image:url("https://richtershotline.github.io/Pimages/Images/BackgroundClub.jpg");
+     background-size: 100% auto;
+    background-repeat: no-repeat; 
+background-size:center;
+background-position:center;
+background-attachment:fixed;
+padding:2rem;
+
+}
+.TeamCon {
+
+
+    margin:auto;
+    width:50%;
+
+}
+#Toast {
+    width:30rem;
+    margin:auto;
+    box-shadow:5px 5px 10px fuchsia;
+    outline:2px solid fuchsia;
+}
+.AboutBG {
+
+    background-color:black;
+    width:100%;
+    height:auto;
+
+}
+#AboutText {
+width:50%;
+    height:auto;
+margin:auto;
+}
+
 #VipBtn {
 
     width:20%;
@@ -66,6 +110,31 @@ padding:2rem;
     
        
     }
+
+    .BodConBG2 {
+
+       margin:auto;
+    
+       
+    }
+    .BodConBG2 img {
+        width:24.3rem;
+        height:25rem;
+        margin-top:0.4rem;
+      
+      box-shadow:5px 5px 10px fuchsia;
+      outline:2px solid fuchsia;
+      }
+      .BodConBG2 p {
+        width:100%;
+        margin:auto;
+        text-align: justify;
+        text-justify: inter-word;
+        margin-top:0.9rem;
+        word-wrap: break-word;
+        padding:12px;
+      
+      }
 
     .BodConBG img {
         width:24.3rem;
@@ -106,6 +175,11 @@ padding:2rem;
         
           
         }
+        #AboutText {
+            width:100%;
+                height:auto;
+            margin:auto;
+            }
         footer {
 
  
@@ -140,6 +214,31 @@ padding:2rem;
         text-align:center;
         
         }
+
+        .BodConBG2 {
+            display:flex;
+            margin:auto;
+         flex-direction:column;
+            
+         }
+         .BodConBG2 img {
+             width:100%;
+             height:auto;
+             margin-top:0.4rem;
+           
+           box-shadow:5px 5px 10px fuchsia;
+           outline:2px solid fuchsia;
+           }
+           .BodConBG2 p {
+             width:100%%;
+             margin:auto;
+             text-align: justify;
+             text-justify: inter-word;
+             margin-top:0.9rem;
+             word-wrap: break-word;
+             padding:12px;
+           
+           }
       }
       
 
@@ -174,6 +273,14 @@ padding:2rem;
         box-shadow:5px 5px 10px fuchsia;
         outline:2px solid fuchsia;
         }
+        #VipImg2 {
+
+            width:30%;
+            height:90%;
+            
+            box-shadow:5px 5px 10px fuchsia;
+            outline:2px solid fuchsia;
+            }
         .VipCon {
 
             display:flex;
