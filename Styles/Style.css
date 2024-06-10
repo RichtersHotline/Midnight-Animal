@@ -188,6 +188,36 @@ padding:2rem;
                   
                   
                   }
+
+                  /* Bottom Con */
+                
+                #PromCon2 {
+                
+                  background-image:url("https://richtershotline.github.io/Pimages/Images/BackgroundClub.jpg");
+                  /* background-size: 100% auto;
+                  background-repeat: no-repeat; */
+                background-size:center;
+                background-position:center;
+                background-attachment:fixed;
+                }
+
+                #BackgroundConProm2 {
+
+                    background-color:black;
+                    opacity:0.9;
+                    height:auto;
+                    text-align:center;
+                    padding:2rem;
+                  
+                  }
+
+                  footer {
+
+                    text-align:right;
+                    background-color:#050205;
+
+                  }
+
     img {
         object-fit: cover;
         object-position: center;
@@ -246,6 +276,23 @@ a:hover {
 
     color:white !important; 
     text-decoration:underline;
+
+}
+
+/* Footer */
+
+footer {
+
+ 
+    bottom: 0;    
+
+height:auto;
+width: 100%;
+position: fixed;
+left: 0;
+text-align:right;
+
+
 
 }
         
