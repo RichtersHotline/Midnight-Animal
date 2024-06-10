@@ -58,7 +58,33 @@ padding:2rem;
       
       }
 
-    
+      /* Media Queries */
+      @media only screen and (max-width: 600px) {
+
+        .BodConBG {
+            background-color:black;
+            display:flex;
+           align-items:center;
+           width:90%;
+           flex-direction:column;
+           font-size:0.4rem;
+        }
+        
+        .BodConBG img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        
+        
+          
+        }
+        
+        .BodCon p {
+        
+        text-align:center;
+        
+        }
+      }
     img {
         object-fit: cover;
         object-position: center;
