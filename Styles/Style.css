@@ -29,6 +29,36 @@ padding:2rem;
     text-align:center;
     padding:2rem;
     }
+    /* Below Landing Page Styling */
+
+    .BodConBG {
+
+        width:25rem;
+       margin:auto;
+    
+       
+    }
+
+    .BodConBG img {
+        width:24.3rem;
+        height:19.4rem;
+        margin-top:0.4rem;
+      
+      box-shadow:5px 5px 10px fuchsia;
+      outline:2px solid fuchsia;
+      }
+      .BodConBG p {
+        width:90%;
+        margin:auto;
+        text-align: justify;
+        text-justify: inter-word;
+        margin-top:0.9rem;
+        word-wrap: break-word;
+        padding:12px;
+      
+      }
+
+    
     img {
         object-fit: cover;
         object-position: center;
