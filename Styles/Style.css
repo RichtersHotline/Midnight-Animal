@@ -18,7 +18,19 @@ background-position:center;
 background-attachment:fixed;
 padding:2rem;
 }
+#VipBtn {
 
+    width:20%;
+    height:5%;
+    border-radius:7px;
+   margin:auto;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   margin-top:9px;
+   text-align:center;
+   }
 #BackgroundCon {
 
     background-color:black;
@@ -78,6 +90,19 @@ padding:2rem;
         
           
         }
+        #VipBtn {
+            width:50%;
+            height:auto;
+            border-radius:7px;
+           margin:auto;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           margin-top:9px;
+           text-align:center;
+          
+          }
         
         .BodCon p {
         
@@ -85,6 +110,7 @@ padding:2rem;
         
         }
       }
+      
 
       /* Promise Content */ 
       #PromCon {
@@ -122,19 +148,7 @@ padding:2rem;
             display:flex;
             flex-direction:column;
             }
-            #VipBtn {
-
-                width:20%;
-                height:5%;
-                border-radius:7px;
-               margin:auto;
-               background-color:blueviolet;
-               box-shadow:3px 3px 10px fuchsia;
-               border:none;
-               color:white;
-               margin-top:9px;
-               text-align:center;
-               }
+        
 
                #Text {
                 max-width:50%;
@@ -145,6 +159,35 @@ padding:2rem;
                 padding:10px;
                 word-wrap: break-word;
                 }
+
+                /* Bootstrap Card Styling */
+
+                #CardBtn {
+                    width:80%;
+                    height:auto;
+                    border-radius:7px;
+                   margin:auto;
+                   background-color:blueviolet;
+                   box-shadow:3px 3px 10px fuchsia;
+                   border:none;
+                   color:white;
+                   margin-top:9px;
+                   text-align:center;
+                  
+                  }
+                  .card {
+
+                    background-color:rgb(27, 9, 43);
+                    box-shadow:5px 5px 10px fuchsia;
+                    outline:2px solid fuchsia;
+                  color:white;
+                  }
+                  .card img {
+                    width:100%;
+                    margin:auto;
+                  
+                  
+                  }
     img {
         object-fit: cover;
         object-position: center;
