@@ -6,3 +6,99 @@ padding: 0;
 box-sizing:border-box;
 
 }
+/* Landing Page CSS */
+
+.BGImg { 
+
+    background-image:url("https://richtershotline.github.io/Pimages/Images/BackgroundClub.jpg");
+    /* background-size: 100% auto;
+    background-repeat: no-repeat; */
+background-size:center;
+background-position:center;
+background-attachment:fixed;
+padding:2rem;
+}
+
+#BackgroundCon {
+
+    background-color:black;
+    opacity:0.7;
+    width:100%;
+    margin:auto;
+    height:auto;
+    text-align:center;
+    padding:2rem;
+    }
+    img {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 1;
+        
+        
+        }
+        body {
+        
+            background-color: 	#1b0e1e;
+          color:white;
+          text-shadow:0.4px 0.4px fuchsia;
+        overflow-x:hidden;
+        }
+        :is(h2) {
+            text-shadow:3px 3px 10px fuchsia;
+        
+        
+        }
+        /* Nav Bar styling */
+        .navbar {
+
+
+            &:img[alt="logo"] {
+             
+             width:2rem;
+         
+            }
+         }
+         
+         .nav-link {
+         
+         color:white;
+         }
+         .navbar-nav > li {
+         padding-left:30px;
+         padding-right:30px;
+         font-size:0.8rem;
+         text-shadow:0.4px 0.4px fuchsia;
+         
+         }
+
+        a:visited {
+
+            
+
+        }
+
+ .active  {
+
+    color:rgb(254, 213, 252) !important;
+text-decoration:underline;   
+ }
+a:hover {
+    text-shadow:2px 2px 10px fuchsia;
+
+    color:white !important; 
+    text-decoration:underline;
+
+}
+        
+         /*  */
+            img[alt="logo"] {
+         
+             width:5rem;
+         
+         
+            }  
+            :is(h2, footer p) {
+         
+          text-align:center;
+         
+            }
