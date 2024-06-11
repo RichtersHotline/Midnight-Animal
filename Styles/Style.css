@@ -59,6 +59,16 @@ padding:2rem;
     width:50%;
 
 }
+#Team {
+
+
+}
+.collapse {
+
+    display:flex;
+    justify-content: center;
+
+}
 #Toast {
     width:30rem;
     margin:auto;
@@ -78,6 +88,25 @@ width:50%;
 margin:auto;
 }
 
+#TeamText {
+
+    text-align:center;
+    width:50%;
+    margin:auto;
+
+}
+.AboutCenter {
+
+    display:flex;
+
+}
+#AboutImg {
+width:40%;
+    height:auto;
+    box-shadow:5px 5px 10px fuchsia;
+    outline:2px solid fuchsia;
+    margin-left:0.4rem;
+}
 #VipBtn {
 
     width:20%;
@@ -158,8 +187,19 @@ margin:auto;
       /* Media Queries */
       @media only screen and (max-width: 600px) {
 
+        #AboutImg {
+            width:50%;
+            height:auto;
+            margin-left:0.4rem;
+        }
+        #TeamText {
+
+            width:50%;
+            font-size:9px;
+            margin-left:9px;  
+               
+           }
         .BodConBG {
-            background-color:black;
             display:flex;
            align-items:center;
            width:90%;
@@ -230,7 +270,7 @@ margin:auto;
            outline:2px solid fuchsia;
            }
            .BodConBG2 p {
-             width:100%%;
+             width:100%;
              margin:auto;
              text-align: justify;
              text-justify: inter-word;
