@@ -41,6 +41,16 @@ background-position:center;
 background-attachment:fixed;
 padding:2rem;
 }
+.BGImg2 { 
+
+    background-image:url("https://richtershotline.github.io/Pimages/Images/Payphone2.jpg");
+    /* background-size: 100% auto;
+    background-repeat: no-repeat; */
+background-size:center;
+background-position:center center;
+background-attachment:fixed;
+padding:2rem;
+}
 /* About Us Styling */
 .BGImgAbout {
     background-image:url("https://richtershotline.github.io/Pimages/Images/BackgroundClub.jpg");
@@ -183,10 +193,83 @@ width:40%;
         padding:12px;
       
       }
+   
 
+      #TxtBox {
+background-color:#381c3e;
+width:50%;
+border-radius:5px;
+color:wihte;
+border:1px solid blueviolet;
+box-shadow:3px 3px 10px fuchsia;
+      outline:2px solid fuchsia;
+      }
+
+      ::placeholder {
+
+        color:white;
+        text-shadow:0.4px 0.4px fuchsia;
+
+      }
       /* Media Queries */
       @media only screen and (max-width: 600px) {
 
+        .ContactBG {
+           word-wrap:break-word;
+            background-color: #120914;
+            box-shadow:5px 5px 10px fuchsia;
+            margin-top:10px;
+        }
+      
+        .Mobile {
+
+            display:flex;
+            flex-direction:column;
+            width:100%;
+
+        }
+        .col-res {
+
+            margin-top:20px;
+
+        }
+        
+        .BGImg2 { 
+
+            background-image:url("https://richtershotline.github.io/Pimages/Images/Payphone2.jpg");
+            /* background-size: 100% auto;
+            background-repeat: no-repeat; */
+        background-size:center;
+        background-position:center center;
+        background-attachment:local;
+        padding:2rem;
+        }
+#ContactForm {
+height:auto;
+    width:100%;
+
+}
+::placeholder {
+
+    font-size:0.1px;
+}
+.ForMobile {
+width:100%;
+display:flex;
+flex-direction:column;
+}
+.ForMobile h3 {
+
+font-size:12px;
+}
+        .ContactBG p {
+          font-size:9px;
+         
+         }
+         .ContactBG h3, h4 {
+            font-size:9px;
+           
+           }
         #AboutImg {
             width:50%;
             height:auto;
@@ -281,7 +364,88 @@ width:40%;
            }
       }
       
+/* Contact Us Styling */
 
+
+
+.ContactUsText {
+
+    margin:auto;
+    width:50%;
+
+}
+textarea {
+
+    resize:none;
+
+}
+.ContactBG {
+opacity:0.9;
+    background-color:black;
+    padding:0.2rem;
+    margin:auto;
+    box-shadow:5px 5px 10px fuchsia;
+
+}
+.ContactBG h3 {
+
+    text-decoration:underline;
+
+}
+#ContactForm {
+
+    width:100%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
+    
+
+}
+input[type=text] {
+
+    color:white;
+    text-shadow:0.4px 0.4px fuchsia;
+
+}
+input[type=email] {
+
+    color:white;
+    text-shadow:0.4px 0.4px fuchsia;
+
+}
+
+input[type=number] {
+
+    color:white;
+    text-shadow:0.4px 0.4px fuchsia;
+
+}
+
+
+select {
+
+    color:white;
+    text-shadow:0.4px 0.4px fuchsia;
+
+}
+textarea {
+
+    color:white;
+    text-shadow:0.4px 0.4px fuchsia;
+}
+
+.BtnCenter {
+display:flex;
+justify-content: center;
+margin-top:0.1rem;
+
+}
+.col-mob {
+
+    padding-bottom:25px;
+
+}
       /* Promise Content */ 
       #PromCon {
 
@@ -406,7 +570,7 @@ width:40%;
           text-shadow:0.4px 0.4px fuchsia;
         overflow-x:hidden;
         }
-        :is(h2) {
+        :is(h2, h3, h4) {
             text-shadow:3px 3px 10px fuchsia;
         
         
