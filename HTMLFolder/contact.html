@@ -39,7 +39,7 @@
                 <a class="nav-link" href="./about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact Us</a>
+                <a class="nav-link active" href="./contact.html">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./checkout.html">Checkout</a>
@@ -95,17 +95,17 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <form action="https://formspree.io/f/mrgnnppr"
+        <form action="https://formspree.io/f/mrgnnppr" id="UserForm"
         method="POST">
 <h3 class="text-center">First Name</h3> 
 <div class="ContactUsText">
-<input type="text" name="FirstName" placeholder="First name..." id="ContactForm" required>
+<input type="text" name="FirstName" placeholder="First name..." class="User" id="ContactForm" required UserEntry>
 </div>
       </div>
       <div class="col">
         <h3 class="text-center">Last Name</h3> 
         <div class="ContactUsText">
-            <input type="text" name="LastName" placeholder="Last name..." id="ContactForm"  required>
+            <input type="text" name="LastName" placeholder="Last name..." class="User" id="ContactForm"  required UserEntry>
         </div>
                   </div>
   </div>
@@ -113,13 +113,13 @@
     <div class="col">
 <h3 class="text-center">Mobile Number</h3> 
 <div class="ContactUsText">
-<input type="number" name="Phone" placeholder="Mobile Number" id="ContactForm" required>
+<input type="number" name="Phone" placeholder="Mobile Number" id="ContactForm" required UserEntry>
 </div>
     </div>
     <div class="col">
       <h3 class="text-center">Email</h3> 
       <div class="ContactUsText">
-          <input type="email" name="Email" placeholder="Email..." id="ContactForm" required>
+          <input type="email" name="Email" placeholder="Email..." id="ContactForm" required UserEntry>
       </div>
                 </div>
 </div>
@@ -150,6 +150,8 @@
                 </div>
                 <div class="BtnCenter">
                 <button id="VipBtn" type="submit" class="mb-5">Send Your Message</button>
+
+                <button id="VipBtn" type="Button" onclick="Clear()" class="mb-5">Clear</button>
                 </div>
                 
                 
@@ -198,7 +200,10 @@ let Copyright = document.getElementById("Foot3r")
 let currentyear = new Date
 
 Copyright.innerHTML = "Midnight Animal"  + "   " + "Copyright" + "      " + "&#169;" +  "        " + currentyear.getUTCFullYear()
-
+function Clear() {
+let UserEntries = document.getElementById("UserForm")
+UserEntries.reset()
+}
 
     </script>
 </body>

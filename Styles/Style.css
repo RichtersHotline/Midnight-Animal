@@ -130,6 +130,7 @@ width:40%;
    margin-top:9px;
    text-align:center;
    }
+   
 #BackgroundCon {
 
     background-color:black;
@@ -233,7 +234,12 @@ box-shadow:3px 3px 10px fuchsia;
             margin-top:20px;
 
         }
-        
+        .BtnCenter {
+            display:flex;
+            margin-top:0.1rem;
+            justify-content: center;
+            flex-direction:column;
+            }
         .BGImg2 { 
 
             background-image:url("https://richtershotline.github.io/Pimages/Images/Payphone2.jpg");
@@ -437,8 +443,9 @@ textarea {
 
 .BtnCenter {
 display:flex;
-justify-content: center;
+flex-direction: column;
 margin-top:0.1rem;
+justify-content: center;
 
 }
 .col-mob {
