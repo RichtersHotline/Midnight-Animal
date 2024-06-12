@@ -29,6 +29,89 @@ opacity:0.7;
     
 
 }
+/* Product Styling */
+#ProductBtn {
+    width:100%;
+    border-radius:7px;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+
+}
+#ProductBtn2 {
+    margin-top:0.8rem;
+    width:20%;
+    border-radius:7px;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+
+}
+#ProductBtnAlph {
+    margin-top:0.8rem;
+    width:20%;
+    border-radius:7px;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+
+}
+.Breaker {
+
+    border-bottom:2px solid white;
+    box-shadow:5px 5px 10px fuchsia;
+
+
+}
+#Searcher {
+    width:50%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
+    text-transform:uppercase;
+
+}
+Input  {
+
+
+}
+.Products {
+display:flex;
+margin:auto;
+flex-wrap:wrap;
+flex-direction:row;
+width:70%;
+
+}
+
+.Products .card {
+transition-duration: 1s ;
+width:20%;
+
+&:hover {
+
+    background-color:#1b0e1e;
+    filter:grayscale(100%);
+
+}
+}
+
+
+.ProductCardTxt {
+
+    text-align: justify;
+    text-justify: inter-word;
+    word-wrap: break-word;
+
+}
+
 /* Landing Page CSS */
 
 .BGImg { 
@@ -221,7 +304,29 @@ box-shadow:3px 3px 10px fuchsia;
             box-shadow:5px 5px 10px fuchsia;
             margin-top:10px;
         }
-      
+        #ProductBtn2 {
+            margin-top:0.8rem;
+            width:100%;
+            border-radius:7px;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           text-align:center;
+
+
+        }
+        #ProductBtnAlph {
+            margin-top:0.8rem;
+            width:100%;
+            border-radius:7px;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           text-align:center;
+
+        }
         .Mobile {
 
             display:flex;
@@ -525,7 +630,7 @@ justify-content: center;
                   
                   }
                   .card {
-
+                      
                     background-color:rgb(27, 9, 43);
                     box-shadow:5px 5px 10px fuchsia;
                     outline:2px solid fuchsia;
@@ -537,7 +642,11 @@ justify-content: center;
                   
                   
                   }
+                  .Checkem {
+display:flex;
+flex-direction:column-reverse;
 
+                  }
                   /* Bottom Con */
                 
                 #PromCon2 {
