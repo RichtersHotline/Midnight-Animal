@@ -90,7 +90,27 @@ flex-direction:row;
 width:70%;
 
 }
+h2 {
 
+    animation:fade ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+@keyframes fade {
+
+    0% {
+
+        opacity:0;
+
+    }
+    100% {
+
+        opacity:1
+
+    }
+
+}
 
 
     
