@@ -3,10 +3,14 @@
 let displayProducts = document.querySelector("[ProductPage]")
 // Sorting by price
 let Sorter =  document.getElementById("ProductBtn2")
-// Sorting alphabetically
+// Sorting by category
 let cateSorter = document.getElementById("ProductBtnAlph")
+let cateSorterTicket = document.getElementById("ProductBtnTicket")
+let cateSorterSub = document.getElementById("ProductBtnSub")
 //Searching By name 
 let searchBar = document.getElementById("Searcher")
+//Checkout Storage
+let cartItem = JSON.parse(localStorage.getItem("cartCheckout")) ? JSON.parse(localStorage.getItem("cartCheckout")) : []
 // local storage here
 let merchandise = JSON.parse(localStorage.getItem("merchandise")) ? JSON.parse(localStorage.getItem("merchandise")) : localStorage.setItem("merchandise", JSON.stringify(
     [
@@ -33,17 +37,16 @@ let merchandise = JSON.parse(localStorage.getItem("merchandise")) ? JSON.parse(l
 
     productName: "MIDNIGHT TICKET",
     Category: "Tickets",
-    Description: "This will allow you access to the club's main floor, bar and dance floor (one night only)",
+    Description: "This will allow you access to the club main floor, bar and dance floor (one night only).",
     Amount: 1000.00,
 img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
   },
-  
   {
     id:4,
 
-    productName: "VISITOR'S PASS",
+    productName: "VISITOR PASS",
     Category: "Tickets",
-    Description: "Gift this pass to a friend (only available if you're in our vip subscriber program) and they'll be able to join you in the vip area for a night.",
+    Description: `Gift this pass to a friend and have them join you in the vip area for a night.`,
     Amount: 800.00,
     img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
   },
@@ -65,7 +68,7 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
     productName: "DRINKS PASS",
     Category: "Tickets",
-    Description: "Buy this ticket to get every drink you and your partners order on the house. You'd do the same for us right? (NOTE: YOU STILL NEED A MIDNIGHT TICKET).",
+    Description: `Buy this ticket to get every drink you and your partners order on the house. You would do the same for us right? (NOTE: YOU STILL NEED A MIDNIGHT TICKET).`,
     Amount: 2500.00,
     img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
@@ -78,7 +81,7 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
     productName: "SECURITY DETAIL",
     Category: "Service",
-    Description: "Your selected club's head of security will assign a personal security detail for you to protect you and yours. (Note while we do offer on-club security these will be YOUR personal security assign them to your booth to keep people away from you do whatever you want with them their ears are closed to secrets and their eyes are open to danger)",
+    Description: `Your selected club will have their head of security  assign a personal security detail for you to protect you and yours. (Note while we do offer on-club security these will be YOUR personal security assign them to your booth to keep people away from you do whatever you want with them their ears are closed to secrets and their eyes are open to danger)`,
     Amount: 1500.00,
     img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
@@ -104,7 +107,7 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
     productName: "RENT-A-CLUB",
     Category: "Service",
-    Description: "Want to have the club all to yourself? Or your closest allies? This is the package for you. You'll get your choice of which club you'd like to rent out. And who to let in for the night. Be it a birthday, a bachelor party or you just feel like being alone for the nonce.",
+    Description: `Want to have the club all to yourself? Or your closest allies? This is the package for you. You will get your choice of which club you would like to rent out. And who to let in for the night. Be it a birthday, a bachelor party or you just feel like being alone for the nonce.`,
     Amount: 95000.00,
     img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
@@ -117,7 +120,7 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
     productName: "MIDNIGHT ANIMAL",
     Category: "Subscription",
-    Description: "This is what we all strive for. This is the ultimate offer we can give to you. Once you're in there's no turning back. Get unlimited VIP access forever, unlimited club access, unlimited drink access, your own personal driver on us. Skip the queues, get your own security detail assigned to you (if you'd like). Get backstage access. And finally a personal hotline to The Boss himself. Maybe you'll even meet him.",
+    Description: `This is what we all strive for. This is the ultimate offer we can give to you. Once you are in there is no turning back. Get unlimited VIP access forever, unlimited club access, unlimited drink access, your own personal driver on us. Skip the queues, get your own security detail assigned to you (if you would like). Get backstage access. And finally a personal hotline to The Boss himself. Maybe you might even meet him.`,
     Amount: 1000000.00,
     img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
 
@@ -147,8 +150,8 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
             <div class="card-body">
               <h5 class="card-title ProductCardTxt text-center">${Item.productName}</h5>
               <p class="card-text ProductCardTxt text-center">$${Item.Amount}.00</p>
-
-              <button id="ProductBtn" onclick="placeholder()">Get Tickets</button>
+              <p class="card-text ProductCardTxt text-center">${Item.Category}</p>
+              <button id="ProductBtn" onclick='cartAdder(${JSON.stringify(Item)})'>Add to Cart</button>
 
             </div>
           </div>
@@ -169,6 +172,9 @@ img_url: "https://richtershotline.github.io/Pimages/Images/ticket.webp"
   <span class="visually-hidden">Loading...</span>
 </div>
         `
+        setTimeout( ()=>{
+            location.reload()
+        }, 2000)
     }
 
     
@@ -205,10 +211,60 @@ displayProducts.innerHTML = "Cannot sort at this time"
 
 
 
-function sortCategory() {
 
+//Sorting by Category 
 
-}
+cateSorter.addEventListener("click", () => {
+
+    try {
+   
+     let CateSearcher = merchandise.filter(Item => Item.Category.includes("Service"))
+     showMerchandise(CateSearcher)
+   
+    } catch (e) {
+   
+   displayProducts.innerHTML = "Can't be done."
+   
+    }
+   
+   
+   
+   
+    })
+     cateSorterTicket.addEventListener("click", () => {
+   
+       try {
+      
+        let CateSearcherTick = merchandise.filter(Item => Item.Category.includes("Tickets"))
+        showMerchandise(CateSearcherTick)
+      
+       } catch (e) {
+      
+      displayProducts.innerHTML = "Can't be done."
+      
+       }
+      
+      
+      
+      
+       })
+       cateSorterSub.addEventListener("click", () => {
+   
+         try {
+        
+          let CateSearcherSubsc = merchandise.filter(Item => Item.Category.includes("Subscription"))
+          showMerchandise(CateSearcherSubsc)
+        
+         } catch (e) {
+        
+        displayProducts.innerHTML = "Can't be done."
+        
+         }
+        
+        
+        
+        
+         })
 
 
  showMerchandise(merchandise)
@@ -234,6 +290,24 @@ searchBar.addEventListener("keyup", () => {
 
 
 })
+
+
+function cartAdder(Item) {
+try { 
+    cartItem.push(Item)
+    localStorage.setItem("cartCheckout", JSON.stringify(cartItem))
+    console.log("Added")
+   alert("Item added to cart, to finalise your purchase, visit the checkout page")
+
+} catch(e) {
+
+    displayProducts.innerHTML = "Cannot Add to cart at this time"
+
+}
+
+
+}
+
 // Footer Copyright
 let Copyright = document.getElementById("Foot3r")
  
