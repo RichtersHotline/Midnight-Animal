@@ -91,6 +91,9 @@ width:70%;
 
 }
 
+
+
+    
 .Products .card {
 transition-duration: 1s ;
 width:20%;
@@ -111,6 +114,30 @@ width:20%;
     word-wrap: break-word;
 
 }
+
+
+#ProductBtnTicket {
+    margin-top:0.8rem;
+    width:25%;
+    border-radius:7px;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+
+}
+#ProductBtnSub {
+    margin-top:0.8rem;
+    width:25%;
+    border-radius:7px;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+}
+
 
 /* Landing Page CSS */
 
@@ -326,6 +353,27 @@ box-shadow:3px 3px 10px fuchsia;
            color:white;
            text-align:center;
 
+        }
+        #ProductBtnTicket {
+            margin-top:0.8rem;
+            width:100%;
+            border-radius:7px;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           text-align:center;
+        
+        }
+        #ProductBtnSub {
+            margin-top:0.8rem;
+            width:100%;
+            border-radius:7px;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           text-align:center;
         }
         .Mobile {
 
