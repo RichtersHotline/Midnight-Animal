@@ -10,7 +10,8 @@ let cartitem = JSON.parse(localStorage.getItem("cartCheckout")) ? JSON.parse(loc
 
 function showCart(args) {
  
-
+    let uniqueArgs = [...new Set(args.map(item => item.productName))]
+    let filteredArgs = args.filter((item, index) => uniqueArgs.indexOf(item.productName) === index)
     let ItemsTable = `
     <table class="table" id="CartID">
     <thead>
@@ -22,6 +23,9 @@ function showCart(args) {
     </tr>
     </thead>
     <tbody>
+    
+      `
+    
 
 
 
@@ -30,13 +34,14 @@ function showCart(args) {
 
 
 
-    `
+
+    
      cartShower.innerHTML = ""
 
     
      try {
 
-        args.forEach(item => {
+        filteredArgs.forEach(item => {
             ItemsTable += `
           <tr>
          <th scope = "row">${item.productName}</th>
@@ -112,10 +117,19 @@ function showCart(args) {
 
  }
  function showTotal() {
+    let checkoutCart = document.getElementById('CartID')
+    let totalPrice = 0
 
+    for (let i = 1; i < checkoutCart.rows.length; i++) {
+        let chargedPrice = checkoutCart.rows[i].cells[3]
 
+        let finalAmount = Number(chargedPrice.innerHTML)
 
- }
+        totalPrice += finalAmount
+    }
+
+    document.getElementById('ItemTotal').value = totalPrice.toFixed(2)
+}
 
 
  showCart(cartitem)

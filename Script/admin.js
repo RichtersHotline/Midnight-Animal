@@ -188,7 +188,7 @@ try {
         `
         setTimeout( ()=>{
             location.reload()
-        }, 2000)
+        }, 2000);
     }
 
     
@@ -268,7 +268,7 @@ function itemUpdater() {
         localStorage.setItem('merchandise', JSON.stringify(merchandise));
         setTimeout( ()=>{
             location.reload()
-        }, 2000)
+        }, 2000);
     }
     
 
