@@ -125,7 +125,15 @@ input[productadd] {
     outline:2px solid fuchsia;
 
 }
+#productCategoryUpdate {
+    width:100%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
 
+
+}
 #adminImg {
 
 width:4rem;
@@ -759,6 +767,8 @@ justify-content: center;
       
       }
 
+      
+
       /* Checkout styling */
 
       #ItemTotal {
@@ -766,6 +776,11 @@ justify-content: center;
         color:black;
         border-radius:7px;
 
+
+      }
+
+      #CartID {
+        
 
       }
       /* Vip Content */
