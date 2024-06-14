@@ -40,6 +40,7 @@ opacity:0.7;
    text-align:center;
 
 }
+
 #ProductBtn2 {
     margin-top:0.8rem;
     width:20%;
@@ -91,12 +92,90 @@ width:70%;
 
 }
 
-#ItemTotal {
+/* Admin Styling */
 
-color:orange;
+#Deleter {
+
+    width:10%;
+   background-color:blueviolet;
+   box-shadow:3px 3px 10px fuchsia;
+   border:none;
+   color:white;
+   text-align:center;
+  
+}
+
+input[productadd] {
+            
+    width:100%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
+    margin-top:5px;
+
+}
+
+#selectCategory {
+
+    width:100%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
+
+}
+
+#adminImg {
+
+width:4rem;
+height:4rem;
+
+}
+
+#adminItems {
+
+   
 
 
 }
+
+.modal-body {
+
+    background-color:#1b0e1e !important;
+
+}
+.modal-header {
+
+    background-color:#1b0e1e !important;
+
+}
+.modal-footer {
+    
+    background-color:#1b0e1e !important;
+
+}
+.btnStyle {
+    height:1.4rem;
+    font-size:9px;
+    width:10%;
+    background-color:blueviolet;
+    box-shadow:3px 3px 10px fuchsia;
+    border:none;
+    color:white;
+    text-align:center;  
+
+}
+#InputDel {
+
+    width:20%;
+    margin:auto;
+    background-color:#1b0e1e;
+    box-shadow:3px 3px 5px fuchsia;
+    outline:2px solid fuchsia;
+
+}
+
 h2 {
 
     animation:fade ease 2s;
@@ -370,6 +449,19 @@ box-shadow:3px 3px 10px fuchsia;
 
 
         }
+
+      
+
+        input[productadd] {
+            
+            width:100%;
+            margin:auto;
+            background-color:#1b0e1e;
+            box-shadow:3px 3px 5px fuchsia;
+            outline:2px solid fuchsia;
+            margin-top:5px;
+        
+        }
         #ProductBtnAlph {
             margin-top:0.8rem;
             width:100%;
@@ -392,6 +484,18 @@ box-shadow:3px 3px 10px fuchsia;
            text-align:center;
         
         }
+        #Deleter {
+
+            width:12%;
+            font-size:10px;
+           background-color:blueviolet;
+           box-shadow:3px 3px 10px fuchsia;
+           border:none;
+           color:white;
+           text-align:center;
+          
+        }
+   
         #ProductBtnSub {
             margin-top:0.8rem;
             width:100%;
