@@ -758,6 +758,16 @@ justify-content: center;
         padding:2rem;
       
       }
+
+      /* Checkout styling */
+
+      #ItemTotal {
+
+        color:black;
+        border-radius:7px;
+
+
+      }
       /* Vip Content */
 
       #VipImg {
