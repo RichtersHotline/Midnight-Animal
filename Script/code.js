@@ -15,8 +15,16 @@
 
 
 
+function about() {
 
+location.href="HTMLFolder/about.html"
 
+}
+function product() {
+
+    location.href="HTMLFolder/product.html"
+
+}
 
 
 
