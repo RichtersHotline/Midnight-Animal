@@ -53,12 +53,116 @@
       <main class="container-fluid">
         <h2 class="display-2 text-center">Admin Page</h2>
         <h4 class="text-center">Control the world from here</h4>
-        <div class="row text-center">
-            <div class="col">
-        <button type="button" class="me-4" onclick="" id="ProductBtn2">Add Product</button>            </div>
+        <h4>Enter ID of product you want to delete</h4>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Adding New Product...</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+            <div class="row text-center">
+                <div class="col">
+            <h4>Enter new item name</h4>
+            <input type="text" id="productName" productadd>
+            <h4>Select new item category</h4>
+            <select name = "category" id="selectCategory">
+                <option value="Tickets">Tickets</option>
+                <option value="Subscription">Subscription</option>
+                <option value="Service">Service</option>
+            </select>
+            <h4>Enter new item description</h4>
+            <input type="text" id="ItemDescription" productadd>
+            <h4>Enter new item price</h4>
+            <input type="number" id="ItemPrice" productadd>
+            <h4>Enter new item Image</h4>
+            <input type="text" id="ItemImage" productadd>
+            <button type="button" class="mb-4" onclick="addNewItem()" id="ProductBtn2">Add Product</button>            </div>
+    
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Updating Product...</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row text-center">
+                <div class="col">
+                    <h4>Enter Product ID</h4>
+            <input type="text" id="IDUpdate" productadd>
+            <h4>Enter new item name</h4>
+            <input type="text" id="productNameUpdate" productadd>
+            <h4>Select new item category</h4>
+            <select name = "category" id="productCategoryUpdate">
+                <option value="Tickets">Tickets</option>
+                <option value="Subscription">Subscription</option>
+                <option value="Service">Service</option>
+            </select>
+            <h4>Enter new item description</h4>
+            <input type="text" id="productCategoryDes" productadd>
+            <h4>Enter new item price</h4>
+            <input type="number" id="productCategoryAmount" productadd>
+            <h4>Enter new item Image</h4>
+            <input type="text" id="productCategoryImg" productadd>
+            <button type="button" class="mb-4" onclick="itemUpdater()" id="ProductBtn2">Update Product</button>            </div>
+    
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Deleting Product....</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row text-center">
+                <div class="col">
+            <h4>Enter item ID</h4>
+            <input type="number" id="InputDel">
 
+            <button type="text" id="Deleter"onclick="deleteViaId()">Delete</button>
+        </div>
+    
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add a new product
+              </button>
+              <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                Update Product
+                  </button>
+                  <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    Delete Product
+                      </button>
         <div class="Products" ProductPage> 
 
 
