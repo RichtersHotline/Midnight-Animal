@@ -90,6 +90,13 @@ flex-direction:row;
 width:70%;
 
 }
+
+#ItemTotal {
+
+color:orange;
+
+
+}
 h2 {
 
     animation:fade ease 2s;

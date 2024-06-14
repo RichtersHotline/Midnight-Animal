@@ -1,5 +1,6 @@
 // Javascript 
 let cartShower = document.getElementById("CheckoutItems")
+let totalCost = document.getElementById("ItemTotal")
 let cartitem = JSON.parse(localStorage.getItem("cartCheckout")) ? JSON.parse(localStorage.getItem("cartCheckout")) : [
 
     
@@ -33,17 +34,17 @@ function showCart(args) {
      cartShower.innerHTML = ""
 
     
-    try {
+     try {
 
         args.forEach(item => {
             ItemsTable += `
-            <tr>
-            <th scope = "row">${item.productName}</th>
-            <td>${item.Category}</td>
-            <td>${item.Amount}</td>
-            <td>${item.Amount}</td>
-
-            </tr>
+          <tr>
+         <th scope = "row">${item.productName}</th>
+        <td>${item.Category}</td>
+         <td><input type="number" id="Quantity${item.productName}" value="0"></td>
+        <td id="PriceTotal${item.productName}">${item.Amount * 0}</td>
+        
+        </tr>
             
             
          
@@ -54,16 +55,23 @@ function showCart(args) {
             `
         
         });
+        cartShower.innerHTML = ItemsTable
+        args.forEach(item => {
+        let quantityInput = document.getElementById(`Quantity${item.productName}`)
+        let PricingTotal = document.getElementById(`PriceTotal${item.productName}`)
+        
+        quantityInput.addEventListener('input', (event) => {
+        let quantityValue = event.target.value
+        PricingTotal.innerHTML = item.Amount * quantityValue;
 
-        ItemsTable += `
-        </tbody>
-        </table>
-        
-        
-        
-        `
-cartShower.innerHTML = ItemsTable
 
+            });
+        });
+  
+
+            
+
+    
     } catch (e) {
 
         cartShower.innerHTML += `
@@ -76,6 +84,7 @@ cartShower.innerHTML = ItemsTable
             location.reload()
         }, 2000)
     }
+    
 
  }
  function clearAsDay() {
@@ -92,9 +101,9 @@ cartShower.innerHTML = ItemsTable
  function purchase() {
     let cartClearer = document.getElementById("CartID")
     cartClearer.remove();
-   cartShower.innerHTML = "Cart Cleared"
+   cartShower.innerHTML = "Purchase complete"
    localStorage.removeItem("cartCheckout")
-   cartShower.innerHTML = "Purchase successful. Thank you for your continued loyalty to our brand. Have a good night. And have fun."
+    alert("Purchase successful. Thank you for your continued loyalty to our brand. Have a good night. And have fun.")
    setTimeout( ()=>{
     location.reload()
 }, 5000)
@@ -102,6 +111,13 @@ cartShower.innerHTML = ItemsTable
 
 
  }
+ function showTotal() {
+
+
+
+ }
+
+
  showCart(cartitem)
  
 
