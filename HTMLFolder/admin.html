@@ -53,8 +53,6 @@
       <main class="container-fluid">
         <h2 class="display-2 text-center">Admin Page</h2>
         <h4 class="text-center">Control the world from here</h4>
-        <h4>Enter ID of product you want to delete</h4>
-
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -106,7 +104,7 @@
             <h4>Enter new item name</h4>
             <input type="text" id="productNameUpdate" productadd>
             <h4>Select new item category</h4>
-            <select name = "category" id="productCategoryUpdate">
+            <select name = "category" id="productCategoryUpdate" productadd>
                 <option value="Tickets">Tickets</option>
                 <option value="Subscription">Subscription</option>
                 <option value="Service">Service</option>
@@ -153,16 +151,27 @@
         </div>
       </div>
     </div>
-  </div>
-        <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+  </div> 
+  <div class="container-fluid">
+  <div class="row mx-auto text-center">
+    <div class="col">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add a new product
               </button>
-              <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                 Update Product
                   </button>
-                  <button type="button" class="btn btnStyle" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                     Delete Product
                       </button>
+                    </div>
+                    </div>
+                </div>
         <div class="Products" ProductPage> 
 
 
